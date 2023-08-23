@@ -61,3 +61,4 @@ find_post = input("검색하고 싶은 단어를 입력하세요.\n")
 for d in posts:
     if find_post in d.content:
         print(d.title)
+###
