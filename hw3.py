@@ -42,13 +42,22 @@ for a in members:
 posts = []
 # posts.append(Post("첫번쨰제목", "첫번째내용", "철수")) # input없으면 이런식으로 넣어야
 
+# 각각의 회원이 게시글 작성하는 코드
 for a in members:
-    for b in range(3):
+    for b in range(3):  # 3개이상을 해야하나 3개만 가능하도록 밖에 하지못함
         title = input(f"{a.name}의 제목:")
         content = input(f"{a.name}의 내용:")
         author = a.name
         posts.append(Post(title, content, author))
         # print(title)
 
-for post in posts:
+for post in posts:  # 입력한 제목과 내용 그리고 회원 이름을 보여주는 코드
     print(post)
+
+
+# 원하는 단어를 찾고싶을때 쓰는
+find_post = input("검색하고 싶은 단어를 입력하세요.\n")
+
+for d in posts:
+    if find_post in d.content:
+        print(d.title)
