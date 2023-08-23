@@ -1,20 +1,20 @@
 
 
-class Member:  # 일단 클래스를 명명
+class Member:  # 1번 Member class 정의
 
-    def __init__(self, name, username, password):
+    def __init__(self, name, username, password):  # 2번 이름 아이디 비밀번호 속성 지정
         # print(f"회원이름은 {name}입니다.\n 회원 아이디는 {username}입니다.")
         self.name = name  # self.속성 = 변수?
         self.username = username
         self.password = password
 
-    def __str__(self):  # 회원정보를 알려주는 함수를 설정
+    def __str__(self):  # 3번 회원정보를 알려주는 함수를 설정
         return (f"회원이름은 {self.name}입니다.\n회원 아이디는 {self.username}입니다.")
     # display 는 print를 해야하지만 __str은 return으로 해야 입력한 리스트들 다나옴
 
 
-class Post():
-    def __init__(self, title, content, author):
+class Post():  # 1번 Post class 정의
+    def __init__(self, title, content, author):  # 4번 제목 내용 작성자 속성 지정
         # super().__init__() # 상속으로author 과 name을 같게할려했으나 오류가 발생해서 상속안시키는걸로...
         self.title = title
         self.content = content
@@ -25,6 +25,7 @@ class Post():
         return (f"제목 : {self.title}\n내용 : {self.content}\n작성자 : {self.author}")
 
 
+# 5번 회원 인스턴스 생성
 members = []
 members.append(Member("철수", "cjftn", "tncjf"))
 members.append(Member("짱구", "Wkdrn", "rnWKd"))
@@ -41,6 +42,9 @@ for a in members:
 
 posts = []
 # posts.append(Post("첫번쨰제목", "첫번째내용", "철수")) # input없으면 이런식으로 넣어야
+
+
+# 6번 각각의 회원이 작성하는 코드
 
 # 각각의 회원이 게시글 작성하는 코드
 for a in members:
